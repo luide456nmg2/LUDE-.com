@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me- LUDE.COM</title>
+    <link rel="stylesheet" href="hire.css">
+<link rel="icon" href="images\web logo.jfif">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="images\web logo.jfif">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="work.html">MY WORK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <h3>Hire me, I do a lot of jobs!</h3>
+            <h3>For Hiring, fill the form below!</h3>
+            <h3>Enter The price you'll offer me!</h3>
+           <div class="form-wrapper">
+            <form class="my-form">
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name......">
+           
+            
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address" placeholder="Enter Your Address......">
+            
+           
+                <label for="name">Price:</label>
+                <input type="text" id="price" name="price" placeholder="Enter The Price......">
+           
+          
+                <label for="name">Job:</label>
+                <select name="jobs" id="jobs">
+                    <option value=""></option>
+                    <option value="web design">Web Design</option>
+                    <option value="fullstack web development">FullStack Web Development</option>
+                    <option value="web maintenance">Web Maintainance</option>
+                    <option value="frontend development">FrontEnd Development</option>
+                    <option value="backend development">BackEnd Development</option>
+                    <option value="software developer">Software Development</option>
+                    <option value="course developer & presenter">Course Development & Presenter</option>
+                    <option value="system analyst">System Analyst</option>
+                    <option value="website management">Website Development</option>
+                </select>
+            
+                <button id="notifyBtn">Hire Me!</button>
+            
+        </form>
+           </div>
+        </div>
+        <script>
+            // Request permission on page load
+            document.addEventListener('DOMContentLoaded', function () {
+              if (Notification.permission !== 'granted') {
+                Notification.requestPermission();
+              }
+            });
+        
+            // Function to show a notification
+            function showNotification() {
+              if (Notification.permission === 'granted') {
+                new Notification('Hello!', {
+                  body: 'Your Message has been sent successfully!',
+                  icon: 'https://cdn-icons-png.flaticon.com/512/1827/1827370.png' // optional icon
+                });
+              } else {
+                alert('Notifications are blocked. Please enable them in your browser settings.');
+              }
+            }
+        
+            // Add event listener to the button
+            document.getElementById('notifyBtn').addEventListener('click', showNotification);
+          </script>
+          <img src="images\Luis.jpg" class="bottom-right-img">
+          <div class="icons">
+            <a href="https://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://x.com"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+      </div> 
+</body>
+</html>
